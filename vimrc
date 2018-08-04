@@ -21,6 +21,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'dracula/vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/powerline'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 
 " plugin from http://vim-scripts.org/vim/scripts.html
