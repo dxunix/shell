@@ -2,12 +2,14 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/user/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
+NI="enp0s8"
+THEIP=`ip addr show dev $NI | grep "inet " | cut -d" " -f6 | cut -d"/" -f1 |tr . -`
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="mytheme"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
