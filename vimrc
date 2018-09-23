@@ -23,6 +23,12 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/powerline'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'nvie/vim-flake8'
+
 
 
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -62,3 +68,25 @@ set softtabstop=0 noexpandtab
 set shiftwidth=4
 
 let g:airline_powerline_fonts = 1
+
+set foldmethod=indent
+set foldlevel=99
+set encoding=utf-8
+nnoremap <space> za
+" Python
+au BufNewFile,BufRead *.py set tabstop=4  softtabstop=4 shiftwidth=4 textwidth=79  expandtab autoindent fileformat=unix
+
+" yaml
+au BufNewFile,BufRead *.js, *.html, *.css, *.yaml, *.yml set tabstop=2  softtabstop=2  shiftwidth=2
+
+highlight BadWhitespace ctermbg=red guibg=darkred
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h,*.yaml,*.yml  match BadWhitespace /\s\+$/
+
+
+set encoding=utf-8
+let python_highlight_all=1
+syntax on
+
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
